@@ -11,9 +11,11 @@ Open a terminal in the extracted QtLiveDashboard_Blue folder:
 ```bash
 sudo apt update
 sudo apt install build-essential cmake qtbase5-dev libqt5svg5-dev can-utils
+
 sudo modprobe vcan
 sudo ip link add dev vcan0 type vcan
 sudo ip link set up vcan0
+
 cmake -S . -B build
 cmake --build build -j2
 cmake --build build --target run_demo
